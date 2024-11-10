@@ -72,6 +72,20 @@ h2{
     justify-content: space-around;
 }
 
+.carousel-inner{
+    width: auto;
+    height: 500px;
+}
+
+.carousel-item{
+    height: 100%;
+    width: 100%;
+    transition: transform .3s ease-in-out;
+}
+.carousel-item img{
+    object-fit: cover;
+}
+
 .my-home-text{
     margin: 4rem 0 2rem 0;
     width: 100%;
@@ -118,7 +132,7 @@ h1{
 
 
 h3{
-    font-size: 3.8rem;
+    font-size: 2.8rem;
     font-weight: bold;
 }
 
@@ -151,7 +165,7 @@ h3{
     color: white;
 }
 
-.my-studio-img{
+.my-studio-image{
     width: 500px;
 }
 
@@ -163,7 +177,7 @@ h3{
 
 
 .my-studio-text p{
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .my-studio-card1,
@@ -374,7 +388,7 @@ background-color: #C3ABFF;
 .gallery-container {
     width: 100%;
     margin: auto;
-    overflow: hidden;
+    /* overflow: hidden; */
     padding: 2rem;
     margin-top: 3rem;
 }
@@ -465,6 +479,17 @@ background-color: #C3ABFF;
 
 
 
+h3,
+h2,
+h1{
+    font-family: 'Castle Begale';
+                                                                                              
+}
+
+
+
+
+
 
 
 
@@ -472,19 +497,49 @@ background-color: #C3ABFF;
 
 /* ______________________________________________________________________ */
 
-  @media screen and (max-width: 750px){
+@media screen and (max-width: 950px){
+    .my-studio-card1:hover, 
+    .my-studio-card2:hover, 
+    .my-studio-card3:hover, 
+    .my-studio-card4:hover {
+        height: 700px;
+    }
+
+}
+
+
+@media screen and (max-width: 750px){
 
     h2 {
         font-size: 13vw;
     }
 
+    #home{
+        padding: 0;
+        margin: 0;
+    }
+
+    .my-home-text{
+        position: absolute;
+        mix-blend-mode: difference;
+        color:#ffffff
+    }
 
     .text-description-about p {
         font-size: 1.3rem;
     }
 
-    .my-studio-text p {
+    .my-studio-text p,
+    #we-are p {
         font-size: 1rem;
+    }
+
+    #we-are .p-5{
+        padding: 1rem !important;
+    }
+
+    .we-are-cards .row{
+        flex-direction: column;
     }
 
     h3 {
@@ -496,7 +551,15 @@ background-color: #C3ABFF;
     .my-studio-card2,
     .my-studio-card3, 
     .my-studio-card4{
-        height: auto;
+        height: 600px;
+        transition: none;
+    }
+
+    .my-studio-card1:hover, 
+    .my-studio-card2:hover, 
+    .my-studio-card3:hover, 
+    .my-studio-card4:hover {
+        height: 600px;
     }
 
     .top-info,
@@ -513,6 +576,36 @@ background-color: #C3ABFF;
     .barcelona h3 {
         font-size: 1rem;
     }
+
+
+
+    .gallery{
+        display: block;
+    }
+
+    .gallery-item{
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        margin: 2rem 1rem;
+        padding: 2rem;
+    }
+
+    .gallery-item .overlay,
+    .gallery-item img{
+        opacity: 1;
+    }
+
+    .gallery-item:hover .overlay,
+    .gallery-item:hover img{
+        opacity: 1;
+    }
+
+    .overlay{
+        position: relative;
+        padding: 1rem 2rem;
+    }
+    
 
   }
 
